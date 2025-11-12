@@ -1,9 +1,10 @@
-#Variables 
-filas_tablero=10
-columnas_tablero=10
+#Tamaño por defecto del tablero
+FILAS_TABLERO = 10
+COLUMNAS_TABLERO = 10
 
-#Creo diccionario con todos los barcos del tipo que son del 1 al cuatro vemos que son 1, del 5 al 7 con un 2 y del 8 al 9 con un 3 el 10 con un 4
-barcos ={
+# Barcos y sus esloras (nombre: eslora)
+# 4 barcos de 1, 3 de 2, 2 de 3, 1 de 4
+BARCOS = {
     "barco_1": 1,
     "barco_2": 1,
     "barco_3": 1,
@@ -15,16 +16,17 @@ barcos ={
     "barco_9": 3,
     "barco_10": 4
 }
-#HE UTILIZADO ESTO PARA NOMBRAR A AGUA BARCO IMPACTO Y FALLO DE PRIMERAS
-agua=0
-barco=1
-impacto=2
-fallo=3
 
-#ESTO LO HE PUESTO POR SI DESPUES CUANDO FUNCIONE BIEN LE DAMOS ALGO DE FORMATO MAS BONITO
-simbolos = {
-    0: "💧", # Agua
-    1: "🚢", # Barco
-    2: "💥", # Impacto
-    3: "😞"  # Fallo
+# Estados de las casillas
+AGUA = 0
+BARCO = 1
+IMPACTO = 2
+FALLO = 3
+
+# Símbolos visuales para mostrar el tablero
+SIMBOLOS = {
+    AGUA: "💧",
+    BARCO: "🚢",
+    IMPACTO: "💥",
+    FALLO: "😞"
 }
