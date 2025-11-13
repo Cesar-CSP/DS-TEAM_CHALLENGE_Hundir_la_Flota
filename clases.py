@@ -175,11 +175,12 @@ class Juego:
     def __init__(self, filas=FILAS_TABLERO, columnas=COLUMNAS_TABLERO):
         self.filas = filas
         self.columnas = columnas
-        self.jugador = Jugador("César", filas, columnas)
+        self.id_jugador = input("Por favor introduce tu nombre:")
+        self.jugador = Jugador(self.id_jugador, filas, columnas)
         self.maquina = Jugador("Máquina", filas, columnas)
 
     def iniciar(self):
-        print("¡Bienvenido a Batalla Naval!")
+        print(f"¡Bienvenido a Batalla Naval {self.id_jugador}!")
         print("Reglas: Dispara a coordenadas (X, Y). Si aciertas, repites turno. El tablero es de 10x10.")
         print("Símbolos: 💧 Agua | 🚢 Barco | 💥 Impacto | 😞 Fallo\n")
 
