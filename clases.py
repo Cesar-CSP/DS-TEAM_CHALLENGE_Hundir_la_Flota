@@ -1,6 +1,6 @@
 import random
 import numpy as np
-from variables import (
+from Variables import (
     FILAS_TABLERO, COLUMNAS_TABLERO,
     BARCOS,
     AGUA, BARCO, IMPACTO, FALLO,
