@@ -191,9 +191,13 @@ class Juego:
         self.maquina.inicializar_barcos()
 
         turno = "jugador"
+        numero_turno = 0  # contador de turnos
 
         while True:
-            os.system("cls" if os.name == "nt" else "clear") #PARA QUE se limpie la pantalla cada turno, sino es un lio!
+            if numero_turno > 0:
+                os.system("cls" if os.name == "nt" else "clear") #PARA QUE se limpie la pantalla cada turno, sino es un lio!
+            numero_turno = 1  # cambio el contador a 1 para que después de la bienvenida sí limpie la pantalla
+
             # Vista del turno
             print("\nTu tablero (barcos e impactos recibidos):")
             self.jugador.tablero.mostrar(mostrar_barcos=True)
